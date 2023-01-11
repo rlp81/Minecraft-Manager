@@ -28,9 +28,9 @@ A Discord bot that can control minecraft servers
 
 ```python3.10 -m pip install mcrcon```
 
-#Running
+# Running
 
-##Making a server
+## Making a server
 Make a new folder in the ~/servers directory, e.g. ~/servers/myserver
 In said folder install the server.jar file, and run it e.g. ```java -jar server.jar```
 create a start.sh file e.g.
@@ -38,11 +38,11 @@ create a start.sh file e.g.
 Then use the following command:
 ```chmod +x start.sh```
 Make sure it works by using: ```./start.sh```
-##Adding the server
+## Adding the server
 Start the bot, and then use the command /add_server SERVERNAME PORT e.g. 56775 PASSWORD
 The password and port are set in server.properties in your server. THESE ARE NOT FOR CONNECTING TO THE SERVER. Enable rcon in the server in server.properties by replacing false with true at enable-rcon=false 
 Set your password and port in server.properties where it says rcon.port=PORT and rcon.password=PASSWORD
-##Running the server
+## Running the server
 Now you can run your server. Use the command /start SERVERNAME and it was start. 
 
 Note: It will take longer to start on the first start up.
