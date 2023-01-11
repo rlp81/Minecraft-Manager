@@ -1,0 +1,62 @@
+{
+    "Friend_Server": {
+        "port": 22345,
+        "pass": "papercool"
+    },
+    "Galacticraft": {
+        "port": 52235,
+        "pass": "spacee"
+    },
+    "copsnrobbers": {
+        "port": 23456,
+        "pass": "prisonsad"
+    },
+    "Virus": {
+        "port": 33567,
+        "pass": "covid"
+    },
+    "Medieval": {
+        "port": 25450,
+        "pass": "sword"
+    },
+    "Create": {
+        "port": 44678,
+        "pass": "wrench"
+    },
+    "Innovation": {
+        "port": 22344,
+        "pass": "milkyegg"
+    },
+    "olive_oil": {
+        "port": 25660,
+        "pass": "oliver"
+    },
+    "RLCraft": {
+        "port": 52230,
+        "pass": "rlc"
+    },
+    "dark": {
+        "port": 22346,
+        "pass": "spook"
+    },
+    "eternal": {
+        "port": 88765,
+        "pass": "mcet"
+    },
+    "nuke": {
+        "port": 52233,
+        "pass": "nuke"
+    },
+    "funny": {
+        "port": 22312,
+        "pass": "funni"
+    },
+    "alex_jordan": {
+        "port": 24556,
+        "pass": "jordansucks"
+    },
+    "matt": {
+        "port": 22145,
+        "pass": "matt0"
+    }
+}
