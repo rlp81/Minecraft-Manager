@@ -1,5 +1,5 @@
 # PLEASE NOTE!
-**This program was programmed in linux. Some changes may need to made.**
+**This program was programmed in linux. Some changes may need to be made.**
 
 # Minecraft-Manager
 A Discord bot that can control minecraft servers
