@@ -6,10 +6,10 @@ import subprocess
 import json
 from discord.ext import commands
 import asyncio
-directory = "/dir/to/bot/servers/"
+directory = "/dir/to/manager/servers/"
 
-
-ip = "0.0.0.0"
+serversonline = 0
+ip = "95.111.230.114"
 bot = discord.Bot(debug_guilds=[])
 def get_info(server):
     path = os.getcwd()
@@ -81,16 +81,14 @@ async def servers(context):
                 try:
                     with r(host=ip, port=mcservers[server]["port"],password=mcservers[server]["pass"]) as f:
                         resp = f.command('list')
-                    if resp():
-                        embed.add_field(name=server, value="Online")
-                    else:
-                        embed.add_field(name=server, value="Offline")
+                    embed.add_field(name=server, value="Online")
                 except:
                     embed.add_field(name=server, value="Offline")
         await context.respond(embed=embed)
 @bot.command(description="Lists all players in a server")
 async def list(context, server):
     mcservers = get_servers()
+    await context.defer()
     if str(server) in mcservers:
         try:
             with r(host=ip, port=mcservers[server]["port"],password=mcservers[server]["pass"]) as f:
@@ -102,6 +100,7 @@ async def list(context, server):
         await context.respond(f"No such server {server}")
 @bot.command(description="Gives access to the console")
 async def console(context, server, *, command):
+    await context.defer()
     owners = get_owners()
     if int(context.author.id) in owners:
         mcservers = get_servers()
@@ -118,6 +117,7 @@ async def console(context, server, *, command):
         await context.respond("You do not have permission to run this command")
 @bot.command(description="Whitelist a user")
 async def whitelist(context, server, setting, user):
+    await context.defer()
     owners = get_owners()
     if int(context.author.id) in owners:
         try:
@@ -131,6 +131,7 @@ async def whitelist(context, server, setting, user):
         await context.respond("You do not have permission to run this command")
 @bot.command(description="Starts a server")
 async def start(context, server):
+    await context.defer()
     owners = get_owners()
     if int(context.author.id) in owners:
         for folder in os.listdir(directory):
@@ -155,6 +156,7 @@ async def start(context, server):
         await context.respond("You do not have permission to run this command")
 @bot.command(description="stop")
 async def stop(context, server):
+    await context.defer()
     owners = get_owners()
     if int(context.author.id) in owners:
         mcservers = get_servers()
@@ -176,7 +178,4 @@ async def stop(context, server):
 @bot.event
 async def on_ready():
     print(f"{bot.user} Ready")
-    #while True:
-     #   await bot.change_presence(activity=discord.Game(f"Minecraft Servers online: {serversonline}"))
-      #  await asyncio.sleep(3)
 bot.run("token")
