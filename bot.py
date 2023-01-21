@@ -9,7 +9,7 @@ import asyncio
 directory = "/dir/to/manager/servers/"
 
 serversonline = 0
-ip = "95.111.230.114"
+ip = "0.0.0.0"
 bot = discord.Bot(debug_guilds=[])
 def get_info(server):
     path = os.getcwd()
