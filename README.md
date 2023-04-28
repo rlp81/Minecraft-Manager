@@ -55,6 +55,6 @@ Enable rcon in the server in server.properties by replacing false with true at e
 Set your password and port in server.properties where it says rcon.port=PORT and rcon.password=PASSWORD
 
 ## Running the server
-Now you can run your server. Use the command /start SERVERNAME and it was start. 
+Now you can run your server. Use the command /start SERVERNAME and it should start. 
 
 Note: It will take longer to start on the first start up.
