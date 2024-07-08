@@ -223,7 +223,4 @@ async def stop(context, server):
 @bot.event
 async def on_ready():
     print(f"{bot.user} Ready")
-    #while True:
-     #   await bot.change_presence(activity=discord.Game(f"Minecraft Servers online: {serversonline}"))
-      #  await asyncio.sleep(3)
 bot.run(token)
